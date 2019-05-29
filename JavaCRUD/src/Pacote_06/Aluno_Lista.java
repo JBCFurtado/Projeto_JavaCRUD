@@ -369,7 +369,7 @@ public final class Aluno_Lista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BT_VOLTAR_PRINCIPALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_VOLTAR_PRINCIPALActionPerformed
-        // TODO add your handling code here:
+        // Volta uma tela
         Tela_02 chamaTela = new Tela_02();
         chamaTela.setVisible(true);
         dispose();
@@ -377,12 +377,19 @@ public final class Aluno_Lista extends javax.swing.JFrame {
     }//GEN-LAST:event_BT_VOLTAR_PRINCIPALActionPerformed
 
     private void BT_VOLTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_VOLTARActionPerformed
-        // TODO add your handling code here:
+        // Volta a tela aluno cadastro
         Aluno_Cadastro chamaTela = new Aluno_Cadastro();
         chamaTela.setVisible(true);
         dispose();
     }//GEN-LAST:event_BT_VOLTARActionPerformed
 
+    /**
+     * /**
+     * Mostra em tela todos os cadastros quando selecionados com as opções 
+     * dos botões remover ou atualizar o cadastro “Professor” ou “Aluno”, 
+     * além do botão voltar a tela anterior ou a tela de início do sistema
+     * @param evt 
+     */
     private void TB_ALUNOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TB_ALUNOMouseClicked
         CX_MATRICULA.setText("" + TB_ALUNO.getValueAt(TB_ALUNO.getSelectedRow(), 0).toString());
         CX_NOME.setText(TB_ALUNO.getValueAt(TB_ALUNO.getSelectedRow(), 1).toString());
@@ -475,7 +482,14 @@ public final class Aluno_Lista extends javax.swing.JFrame {
     }//GEN-LAST:event_BT_ATUALIZARActionPerformed
 
     private void BT_DELETEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_DELETEActionPerformed
-
+        /**
+         * /**
+         * Mostra em tela todos os cadastros quando selecionados com as opções 
+         * dos botões remover ou atualizar o cadastro “Professor” ou “Aluno”, 
+         * além do botão voltar a tela anterior ou a tela de início do sistema.
+         * @param evt 
+         */
+         
         if (MATRICULA == 0) {
             JOptionPane.showMessageDialog(null, "POR FAVOR, SELECIONE! ");
         } else {
@@ -558,7 +572,9 @@ public final class Aluno_Lista extends javax.swing.JFrame {
     }
 
     public void removeAluno() {
-
+        /**
+         * Puxa todos os dados inseridos e gravados na tela de lista do Professor.
+         */
         Aluno Pacote_04 = new Aluno();
         Pacote_04.DeleteAluno(MATRICULA);
         JOptionPane.showMessageDialog(null, "REMOVIDO COM SUCESSO!");
@@ -569,3 +585,8 @@ public final class Aluno_Lista extends javax.swing.JFrame {
     }
 
 }
+
+/**
+ *A vitória as custas de inocentes não é vitória alguma.”
+ *— Capitão América: Guerra Civil
+ */

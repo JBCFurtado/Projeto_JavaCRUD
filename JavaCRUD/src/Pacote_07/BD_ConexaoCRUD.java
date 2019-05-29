@@ -15,6 +15,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * a conexão do BD_CRUD, através da classe JDBC do MySQL importada da 
+ * import java.sql.DriverManager.
+ * @author jobs
+ */
 public class BD_ConexaoCRUD {
 
     public BD_ConexaoCRUD() {
@@ -33,7 +38,7 @@ public class BD_ConexaoCRUD {
 
             con = DriverManager.getConnection("jdbc:mysql://localhost/CRUD", "root", "");
 
-            System.out.println("100 CONECTADO!");
+            System.out.println("100% CONECTADO!");
 
         } catch (ClassNotFoundException ex) {
             System.out.println("POR FAVOR, ADICIONE O DRIVER DE CONEÇÃO.");
@@ -45,3 +50,8 @@ public class BD_ConexaoCRUD {
     }
 
 }
+
+/**
+ * As leis da natureza transcendem as leis do homem.
+ * — Homem-Formiga
+ */

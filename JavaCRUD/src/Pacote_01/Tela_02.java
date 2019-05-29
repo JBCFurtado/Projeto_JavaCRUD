@@ -16,8 +16,7 @@ import Pacote_03.Professor_Cadastro;
 import javax.swing.JOptionPane;
 
 /**
- * SISTEMA DE CADASTRO + BANCO DE DADOS JAVA CRUD
- *
+ * PROJETO JAVA CRUD
  * @author jobs
  */
 public class Tela_02 extends javax.swing.JFrame {

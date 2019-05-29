@@ -20,8 +20,7 @@ import java.util.logging.Logger;
 import sun.awt.image.ImageWatched.Link;
 
 /**
- * SISTEMA DE CADASTRO + BANCO DE DADOS JAVA CRUD
- *
+ * PROJETO JAVA CRUD
  * @author jobs
  */
 public class Tela_01 extends javax.swing.JFrame {
@@ -138,7 +137,8 @@ public class Tela_01 extends javax.swing.JFrame {
     private void BT_SITEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SITEActionPerformed
         /**
          * Código abaixo chama link do Site (jobst.net.br) onde está todo passo
-         * a passo de como criar um sistema de cadastro usando o JFrame.
+         * a passo de como criar o ambiente para começar esse projeto usando o sistema 
+         * Ubuntu 18.10 amd x64
          */
         try {
 
@@ -156,7 +156,7 @@ public class Tela_01 extends javax.swing.JFrame {
          */
         try {
 
-            Desktop.getDesktop().browse(new URI("http://www.github.com/JBCFurtado"));
+            Desktop.getDesktop().browse(new URI("https://github.com/JBCFurtado/Projeto_JavaCRUD"));
         } catch (URISyntaxException | IOException ex) {
             Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -200,5 +200,6 @@ public class Tela_01 extends javax.swing.JFrame {
 }
 
 /**
- * "Nós caímos para aprendermos a nos levantar!" - Batman Begins
+ * "Nós caímos para aprendermos a nos levantar!" 
+ * - Batman Begins
  */

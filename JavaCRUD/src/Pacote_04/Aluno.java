@@ -25,6 +25,14 @@ public class Aluno {
     public void insereAluno(Aluno_Parametro jobs_ti) {
         BD_ConexaoCRUD.Conectar();
         String sql = "INSERT INTO ALUNO(NOME, RG, CPF, ENDERECO, BAIRRO, TELEFONE, SEXO, CURSO, PERIODO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        /**
+         * O Pacote_04 traz todos os “SET’s” que utilizamos para obtermos 
+         * todas as informações dos “Professores” e “Alunos” cadastrados 
+         * no sistemas através do BD.A linha 37 invoca o método Connection 
+         * createStatement para obter um objeto que implementa a interface 
+         * Statement (pacote java.sql ). O programa utiliza o objeto Statement 
+         * para enviar instruções de SQL ao banco de dados.
+         */
         try {
             PreparedStatement statement = BD_ConexaoCRUD.con.prepareStatement(sql);
             statement.setString(1, jobs_ti.getNOME());
@@ -193,3 +201,8 @@ public class Aluno {
 
  
 }
+
+/**
+ * Não venha com “lady” pra cima de mim. Eu sou uma Vingadora.
+ * - Capitã Marvel
+ */

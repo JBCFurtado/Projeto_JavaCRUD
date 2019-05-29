@@ -1,7 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PARÁ
+ * CAMPUS ALTAMIRA
+ * TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
+ * PROGRAMAÇÃO ORIENTADO A OBJETO
+ * PROFESSOR: PAULO CESAR DE ALMEIDA JUNIOR
+ * ALUNO: JOSUÉ BATISTA CAMARÃO FURTADO
+ * -----------------------------------------------------------
+ * SEGUNDA TELA INICIAL DO SISTEMA
+ * -----------------------------------------------------------
  */
 package Pacote_09;
 
@@ -28,7 +34,10 @@ public class ProfessorDao {
         Connection con = ConnectionFactory.getConnection();
         
         PreparedStatement stmt = null;
-
+        /**
+         * Responsável por conectar o BD_CRUD e fazer as alterações 
+         * realizados pelo administrador nos cadastros “Professores” e “Alunos”.
+         */
         try {
             stmt = con.prepareStatement("UPDATE PROFESSOR SET NOME = ?, RG = ? ,CPF = ? ,ENDERECO = ?,BAIRRO = ?,TELEFONE = ?,EMAIL = ?,SEXO = ?,DISCIPLINA = ?,ATUACAO = ? WHERE MATRICULA = ?");
             stmt.setString(1, jobs_ti.getNOME());
@@ -98,3 +107,8 @@ public class ProfessorDao {
     }
     
 }
+
+/**
+ * Às vezes temos que correr antes de andar.
+ * — Homem de Ferro
+ */

@@ -299,7 +299,10 @@ public final class Professor_Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BT_INSERIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_INSERIRActionPerformed
-
+            /**
+            * Códigos abaixos fazem todos os campos obrigatórios na tela de cadatro do 
+            * Professor.
+            */
         if ((CX_NOME.getText().isEmpty()) || (CX_RG.getText().trim().length() < 3)
                 || (CX_CPF.getText().trim().length() < 14) || (CX_ENDERECO.getText().isEmpty())
                 || (CX_TELEFONE.getText().trim().length() < 13)
@@ -309,6 +312,11 @@ public final class Professor_Cadastro extends javax.swing.JFrame {
         } 
         
         else {
+             /**
+             * Usamos get para obter informações. Esse tipo de método sempre retorna um
+             * valor. Usamos set para definir valores. Esse tipo de método geralmente
+             * não retorna valores.
+             */
             jobs_ti.setNOME(CX_NOME.getText());
             jobs_ti.setRG(CX_RG.getText());
             jobs_ti.setCPF(CX_CPF.getText());
@@ -332,14 +340,19 @@ public final class Professor_Cadastro extends javax.swing.JFrame {
 
 
     private void BT_TELA_ANTERIORActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_TELA_ANTERIORActionPerformed
-        
+        /**
+        * Volta a tela anterior
+        */
         Tela_02 PuxaTela = new Tela_02();
         PuxaTela.setVisible(true);
         dispose();
     }//GEN-LAST:event_BT_TELA_ANTERIORActionPerformed
 
     private void BT_PROFESSORES_CADASTRADOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_PROFESSORES_CADASTRADOSActionPerformed
-        //Adicione seu código de manipulação aqui:
+         /**
+         * Botão que chama a tela que traz a lista de Professores cadastrados
+         * no banco de dado.
+         */
         Professor_Lista PuxaTela = new Professor_Lista();
         PuxaTela.setVisible(true);
         dispose();
@@ -451,7 +464,9 @@ public final class Professor_Cadastro extends javax.swing.JFrame {
     }
 
     public void iniciaBD_CRUD() {
-
+         /**
+         * Inicia BD com usuário padrão (Root)
+         */
         Pacote_04.selectProfessor(jobs_ti);
         System.out.println(jobs_ti.getNOME());
         if (jobs_ti.getNOME() == null) {
@@ -466,8 +481,14 @@ public final class Professor_Cadastro extends javax.swing.JFrame {
             if (identityMATRICULA >= 0 && identityMATRICULA <= 9) {
                 identityMATRICULA = identityMATRICULA + 1;
                 CX_MATRICULA.setText(String.valueOf("000" + identityMATRICULA));
+                /**
+                 * 000 número de casa que antecedem o número da matrícula
+                 */
             } else {
                 identityMATRICULA = identityMATRICULA + 1;
+                /**
+                 * Quando receber + 1 diminui o numero de casas de 000 para 00.
+                 */
                 CX_MATRICULA.setText(String.valueOf("00" + identityMATRICULA));
             }
         }

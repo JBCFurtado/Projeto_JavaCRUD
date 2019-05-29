@@ -6,14 +6,13 @@
  * PROFESSOR: PAULO CESAR DE ALMEIDA JUNIOR
  * ALUNO: JOSUÉ BATISTA CAMARÃO FURTADO
  * -----------------------------------------------------------
- * MÉTODOS GETSET DO ALUNO
+ * MÉTODO GET's & SET's DO ALUNO
  * -----------------------------------------------------------
  */
 package Pacote_02;
 
 /**
- * SISTEMA DE CADASTRO + BANCO DE DADOS JAVA CRUD
- *
+ * PROJETO JAVA CRUD
  * @author jobs
  */
 public class Aluno_Parametro {

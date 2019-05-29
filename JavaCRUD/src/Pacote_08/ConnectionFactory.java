@@ -20,12 +20,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * PROJETO JAVA CRUD
  * @author jobs
  */
 public class ConnectionFactory {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/CRUD";
+    /**
+     * Define Usuario: "root"
+     * Define senha: ""
+     */
     private static final String USER = "root";
     private static final String PASS = "";
 
@@ -79,3 +83,9 @@ public class ConnectionFactory {
     }
     
 }
+
+/**
+ * As pessoas pensam em termos de bem e mal, mas na verdade o tempo que 
+ * é nosso inimigo real. O tempo mata tudo.
+ * — Doutor Estranho
+ */

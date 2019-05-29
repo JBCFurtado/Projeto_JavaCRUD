@@ -475,7 +475,12 @@ public final class Professor_Lista extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_BT_DELETEActionPerformed
-
+    /**
+     * Mostra em tela todos os cadastros quando selecionados com as opções 
+     * dos botões remover ou atualizar o cadastro “Professor” ou “Aluno”, 
+     * além do botão voltar a tela anterior ou a tela de início do sistema.
+     * @param evt 
+     */
     private void TB_PROFESSORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TB_PROFESSORMouseClicked
         CX_MATRICULA.setText("" + TB_PROFESSOR.getValueAt(TB_PROFESSOR.getSelectedRow(), 0).toString());
         CX_NOME.setText(TB_PROFESSOR.getValueAt(TB_PROFESSOR.getSelectedRow(), 1).toString());
@@ -631,7 +636,9 @@ public final class Professor_Lista extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) TB_PROFESSOR.getModel();
 
         Professor Pacote_04 = new Professor();
-
+        /**
+         * Puxa todos os dados inseridos e gravados na tela de lista do Professor.
+         */
         Pacote_04.puxaDados().forEach((jobs_ti) -> {
             modelo.addRow(new Object[]{
                 jobs_ti.getMATRICULA(),
@@ -662,3 +669,8 @@ public final class Professor_Lista extends javax.swing.JFrame {
     }
 
 }
+
+/**
+ * Apontam uma arma para todo o planeta e chamam de proteção.
+ *— Capitão América 2: O Soldado Invernal
+ */

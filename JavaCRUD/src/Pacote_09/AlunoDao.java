@@ -5,6 +5,9 @@
  * PROGRAMAÇÃO ORIENTADO A OBJETO
  * PROFESSOR: PAULO CESAR DE ALMEIDA JUNIOR
  * ALUNO: JOSUÉ BATISTA CAMARÃO FURTADO
+ * -----------------------------------------------------------
+ * SEGUNDA TELA INICIAL DO SISTEMA
+ * -----------------------------------------------------------
  */
 package Pacote_09;
 
@@ -32,7 +35,10 @@ public class AlunoDao {
         Connection con = ConnectionFactory.getConnection();
         
         PreparedStatement stmt = null;
-
+        /**
+         * responsável por conectar o BD_CRUD e fazer as alterações realizados 
+         * pelo administrador nos cadastros “Professores” e “Alunos”.
+         */
         try {
             stmt = con.prepareStatement("UPDATE ALUNO SET NOME = ?, RG = ?, CPF = ? ,ENDERECO = ?,BAIRRO = ?,TELEFONE = ?,SEXO = ?,CURSO = ?,PERIODO = ? WHERE MATRICULA = ?");
             stmt.setString(1, jobs_ti.getNOME());
@@ -98,3 +104,8 @@ public class AlunoDao {
     }
     
 }
+
+/**
+ * “Às vezes, o que procuramos a vida toda, sempre esteve ao nosso lado.”
+— Guardiões da Galáxia Vol. 2
+ */

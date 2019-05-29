@@ -333,12 +333,20 @@ public final class Aluno_Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BT_INSERIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_INSERIRActionPerformed
-
+           /**
+            * Códigos abaixos fazem todos os campos obrigatórios na tela de cadatro do 
+            * aluno.
+            */
         if ((CX_NOME.getText().isEmpty()) || (CX_RG.getText().trim().length() < 3)
                 || (CX_CPF.getText().trim().length() < 14) || (CX_ENDERECO.getText().isEmpty())
                 || (CX_TELEFONE.getText().trim().length() < 13)) {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios!");
         } else {
+            /**
+             * Usamos get para obter informações. Esse tipo de método sempre retorna um
+             * valor. Usamos set para definir valores. Esse tipo de método geralmente
+             * não retorna valores.
+             */
             jobs_ti.setNOME(CX_NOME.getText());
             jobs_ti.setRG(CX_RG.getText());
             jobs_ti.setCPF(CX_CPF.getText());
@@ -383,6 +391,9 @@ public final class Aluno_Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_CX_NOMEFocusGained
 
     private void BT_ANTERIORActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ANTERIORActionPerformed
+       /**
+        * Volta a tela anterior
+        */
         Tela_02 PuxaTela = new Tela_02();
         PuxaTela.setVisible(true);
         dispose();
@@ -465,6 +476,10 @@ public final class Aluno_Cadastro extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void apagaDados() {
+        
+        /**
+         * class public - Apaga todos os campos abaixos
+         */
         CX_NOME.setText("");
         CX_RG.setText("");
         CX_CPF.setText("");
@@ -478,7 +493,9 @@ public final class Aluno_Cadastro extends javax.swing.JFrame {
     }
 
     public void iniciaBD_CRUD() {
-
+        /**
+         * Inicia BD com usuário padrão (Root)
+         */
         Pacote_04.selectAluno(jobs_ti);
         System.out.println(jobs_ti.getNOME());
         if (jobs_ti.getNOME() == null) {
@@ -493,8 +510,14 @@ public final class Aluno_Cadastro extends javax.swing.JFrame {
             if (identity_MATRICULA >= 0 && identity_MATRICULA <= 9) {
                 identity_MATRICULA = identity_MATRICULA + 1;
                 CX_MATRICULA.setText(String.valueOf("000" + identity_MATRICULA));
+                /**
+                 * 000 número de casa que antecedem o número da matrícula
+                 */
             } else {
                 identity_MATRICULA = identity_MATRICULA + 1;
+                /**
+                 * Quando receber + 1 diminui o numero de casas de 000 para 00.
+                 */
                 CX_MATRICULA.setText(String.valueOf("00" + identity_MATRICULA));
             }
 
