@@ -75,9 +75,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         PAINAL_FUNDO.add(CX_SENHA);
-        CX_SENHA.setBounds(243, 405, 226, 34);
+        CX_SENHA.setBounds(243, 405, 226, 30);
         PAINAL_FUNDO.add(CX_LOGIN);
-        CX_LOGIN.setBounds(243, 353, 226, 34);
+        CX_LOGIN.setBounds(243, 353, 226, 30);
 
         BT_ENTER.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         BT_ENTER.setText("Entrar");
@@ -121,7 +121,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
         PAINAL_FUNDO.add(jLabel2);
-        jLabel2.setBounds(50, 270, 49, 17);
+        jLabel2.setBounds(50, 270, 49, 18);
 
         getContentPane().add(PAINAL_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, 638, 520));
 

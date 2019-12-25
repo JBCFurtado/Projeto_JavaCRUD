@@ -15,7 +15,6 @@ import Pacote_01.Tela_02;
 import Pacote_02.Professor_Parametro;
 import Pacote_03.Professor_Cadastro;
 import Pacote_04.Professor;
-import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
